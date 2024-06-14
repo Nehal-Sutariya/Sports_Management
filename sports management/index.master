@@ -1,0 +1,57 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="index.master.cs" Inherits="index" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <div id="header">
+                <div id="logo">
+                    <img src="../image/logo.jpg" height="100" width="100" class="float_right" />
+                </div>
+                <div id="login">
+                    <asp:LinkButton ID="userlogin" runat="server" PostBackUrl="~/login.aspx" OnClick="userlogin_Click1">
+                        <img src="image/login.jpg" height="50" width="50" class="float_right" />
+                    </asp:LinkButton>
+                    <asp:LinkButton ID="userlogout" runat="server" OnClick="userlogout_Click">
+                        <img src="image/logout.jpg" height="50" width="50" class="float_right" />
+                    </asp:LinkButton>
+                    <asp:Label ID="msg" runat="server" ForeColor="#CDDECC" Font-Size="20px" class="float_right"></asp:Label>
+                    <br />
+                    <asp:LinkButton ID="changepassword" runat="server" PostBackUrl="~/changepassword.aspx" class="float_right" ForeColor="#CDDECC">Change Password</asp:LinkButton>
+                </div>
+                <div id="title">
+                    <center>Sports Management</center>
+                </div>
+            </div>
+            <div id="menu">
+                <asp:LinkButton ID="home" runat="server" PostBackUrl="/home.aspx">Home</asp:LinkButton>&nbsp;&nbsp;
+                <asp:LinkButton ID="aboutus" runat="server" PostBackUrl="~/aboutus.aspx">About Us</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="contactus" runat="server" PostBackUrl="~/contactus.aspx">Contact Us</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="games" runat="server" PostBackUrl="/games.aspx">Games</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="player" runat="server" PostBackUrl="~/player.aspx">Player</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="team" runat="server" PostBackUrl="~/team.aspx">Team</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="feedback" runat="server" PostBackUrl="~/feedback.aspx">Feedback</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="viewregistration" runat="server" PostBackUrl="~/viewregistration.aspx">View Registration</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="viewgames" runat="server" PostBackUrl="~/viewgames.aspx">View Games</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="viewplayer" runat="server" PostBackUrl="~/viewplayer.aspx">View Player</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="viewteam" runat="server" PostBackUrl="~/viewteam.aspx">View Team</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="viewfeedback" runat="server" PostBackUrl="~/viewfeedback.aspx">View Feedback</asp:LinkButton>
+            </div>
+            <div id="content">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="footer" style="font-family: 'Edwardian Script ITC';">
+                <center><b>Developed By Nehal Sutariya & Viviksha Vyas</b></center>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
